@@ -1,0 +1,54 @@
+.tripCard {
+    background-color: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 4px 4px rgba(255, 173, 105, 0.3);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Libre Franklin', sans-serif;
+    padding: 42px 48px;
+    width: calc(50% - 10px);
+  }
+  
+  .tripHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+  }
+  
+  .tripTitle {
+    background-color: rgba(255, 173, 105, 0.3);
+    color: #303030;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 2px;
+  }
+  
+  .tripDates {
+    color: #303030;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .tripFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .attendeeCount {
+    color: #303030;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  @media (max-width: 991px) {
+    .tripCard {
+      width: 100%;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .tripHeader {
+      margin-bottom: 30px;
+    }
+  }
