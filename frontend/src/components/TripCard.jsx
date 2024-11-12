@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './TripCard.module.css';
-import AttendeeList from './AttendeeList';
+import styles from '../styles/TripCard.module.css';
+import AttendeeList from '../components/AttendeeList';
 
 const TripCard = ({ title, dates, attendees }) => {
   return (

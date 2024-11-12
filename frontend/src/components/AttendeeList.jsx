@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './AttendeeList.module.css';
+import styles from '../styles/AttendeeList.module.css';
 
 const AttendeeList = ({ attendees }) => {
   return (

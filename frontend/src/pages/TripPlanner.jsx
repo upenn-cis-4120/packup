@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './TripPlanner.module.css';
-import TripCard from './TripCard';
+import styles from '../styles/TripPlanner.module.css';
+import TripCard from '../components/TripCard';
 
 const TripPlanner = () => {
   const trips = [
