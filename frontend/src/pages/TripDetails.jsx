@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../styles/TripDetails.module.css';
 import Header from '../components/Header';
 import TripInfo from '../components/TripInfo';
-import ActivityCard from '../components/ActivityCard';
+import ActivityCard from '../components/ActivityOverviewCard';
 
 const TripDetails = () => {
   const activities = [

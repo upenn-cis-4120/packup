@@ -1,9 +1,9 @@
-.tripPlanner {
+.trips {
     background-color: #fff;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    padding-bottom: 280px;
+    padding-bottom: 280;
   }
   
   .header {
@@ -44,8 +44,10 @@
   }
   
   .tripSection {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 57px 57px 0;
     width: 100%;
   }

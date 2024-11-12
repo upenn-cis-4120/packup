@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/Activities.module.css';
-import ActivityCard from '../components/ActivityPageActivityCard';
+import ActivityCard from '../components/TripActivitiesCard';
 
 const Activities = () => {
   const activities = [

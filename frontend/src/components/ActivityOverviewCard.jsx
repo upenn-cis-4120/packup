@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/ActivityCard.module.css';
+import styles from '../styles/ActivityOverviewCard.module.css';
 
 const ActivityCard = ({ name, date, capacity, attendees, status }) => {
   return (
