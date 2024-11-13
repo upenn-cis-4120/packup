@@ -52,6 +52,7 @@
   .joinButton,
   .maybeButton,
   .waitlistButton {
+    color: #303030;
     background-color: rgba(255, 173, 105, 0.3);
     border: none;
     cursor: pointer;

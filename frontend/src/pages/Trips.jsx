@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../styles/Trips.module.css';
+import Header from '../components/Header';
 import TripCard from '../components/TripCard';
 
 const Trips = () => {
@@ -37,17 +38,7 @@ const Trips = () => {
 
   return (
     <main className={styles.trips}>
-      <header className={styles.header}>
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f7f79458-a1c8-4104-8c49-5cf47daaa824?placeholderIfAbsent=true&apiKey=3a931a869e0e4b4bb92008bc01989510" alt="Trip Planner Logo" className={styles.logo} />
-        <nav className={styles.navigation}>
-          <ul className={styles.navList}>
-            <li><a href="#trips" className={styles.navLink}>Trips</a></li>
-            <li><a href="#calendar" className={styles.navLink}>Calendar</a></li>
-            <li><a href="#activities" className={styles.navLink}>Activities</a></li>
-            <li><a href="#profile" className={styles.navLink}>Profile</a></li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
       <section className={styles.tripSection}>
         <h1 className={styles.sectionTitle}>Your Trips</h1>
         <div className={styles.tripGrid}>

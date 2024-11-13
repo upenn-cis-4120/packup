@@ -7,6 +7,6 @@ import Activities from './pages/Activities.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Trips />
+    <Activities />
   </StrictMode>,
 )

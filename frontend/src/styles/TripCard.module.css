@@ -6,6 +6,7 @@
     flex-direction: column;
     font-family: 'Libre Franklin', sans-serif;
     padding: 42px 48px;
+    width: 100%;
   }
   
   .tripHeader {

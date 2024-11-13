@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../styles/Activities.module.css';
+import Header from '../components/Header';
 import ActivityCard from '../components/TripActivitiesCard';
 
 const Activities = () => {
@@ -19,27 +20,17 @@ const Activities = () => {
   ];
 
   return (
-    <div className={styles.activitiesContainer}>
-      <header className={styles.header}>
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4d04c331-3d41-440a-9184-75062f6acf22?placeholderIfAbsent=true&apiKey=3a931a869e0e4b4bb92008bc01989510" alt="Logo" className={styles.logo} />
-        <nav className={styles.navLinks}>
-          <a href="#trips">Trips</a>
-          <a href="#calendar" className={styles.calendarLink}>Calendar</a>
-          <a href="#activities" className={styles.activitiesLink}>Activities</a>
-          <a href="#profile">Profile</a>
-        </nav>
-      </header>
-      <main className={styles.mainContent}>
-        <h1 className={styles.pageTitle}>Your Activities</h1>
-        <div className={styles.activitiesWrapper}>
-          <div className={styles.activitiesGrid}>
-            {activities.map((activity, index) => (
-              <ActivityCard key={index} {...activity} />
-            ))}
-          </div>
+    <main className={styles.activities}>
+      <Header />
+      <section className={styles.activitySection}>
+        <h1 className={styles.sectionTitle}>Your Activities</h1>
+        <div className={styles.activitiesGrid}>
+          {activities.map((activity, index) => (
+            <ActivityCard key={index} {...activity} />
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 };
 

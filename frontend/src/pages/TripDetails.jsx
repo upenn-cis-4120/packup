@@ -34,7 +34,7 @@ const TripDetails = () => {
           ))}
         </div>
         <footer className={styles.footer}>
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/bfdfcf41-4f80-4e34-adc6-0510b9717c16?placeholderIfAbsent=true&apiKey=3a931a869e0e4b4bb92008bc01989510" alt="" className={styles.footerImage} />
+          <button className={styles.addActivityButton} aria-label="Add new trip">+</button>
           <button className={styles.deleteButton}>Delete</button>
         </footer>
       </section>

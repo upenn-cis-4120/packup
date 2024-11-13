@@ -1,9 +1,11 @@
-.activitiesContainer {
+.activities {
   background-color: #fff;
   display: flex;
-  padding-bottom: 128px;
   flex-direction: column;
-  overflow: hidden;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding-bottom: 280px;
+  box-sizing: border-box;
 }
 
 @media (max-width: 991px) {
@@ -61,70 +63,50 @@
   font-weight: 700;
 }
 
-.mainContent {
+.activitySection {
+  flex-grow: 1;
   display: flex;
-  margin-top: 57px;
-  width: 100%;
   flex-direction: column;
-  padding: 0 54px;
+  padding: 60px 60px 0;
 }
 
 @media (max-width: 991px) {
-  .mainContent {
+  .activitySection {
     max-width: 100%;
     margin-top: 40px;
     padding: 0 20px;
   }
 }
 
-.pageTitle {
+.sectionTitle {
   color: #000;
-  text-align: center;
-  align-self: flex-start;
-  font: 400 28px 'Libre Franklin', -apple-system, Roboto, Helvetica, sans-serif;
-}
-
-.activitiesWrapper {
-  align-self: flex-end;
-  margin-top: 43px;
-  width: 100%;
-  max-width: 1119px;
-}
-
-@media (max-width: 991px) {
-  .activitiesWrapper {
-    max-width: 100%;
-    margin-top: 40px;
-  }
+  font: 400 28px 'Libre Franklin', sans-serif;
+  margin-bottom: 38px;
 }
 
 .activitiesGrid {
-  gap: 20px;
   display: flex;
-}
-
-@media (max-width: 991px) {
-  .activitiesGrid {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-  }
+  gap: 20px;
+  margin-top: 43px;
 }
 
 .activityCard {
-  border-radius: 8px;
+  color: #303030;
   background-color: #fafafa;
+  border-radius: 8px;
   box-shadow: 0 4px 4px rgba(255, 173, 105, 0.3);
-  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Libre Franklin', sans-serif;
+  padding: 42px 48px;
   width: 100%;
-  padding: 39px 53px 85px;
 }
 
 @media (max-width: 991px) {
   .activityCard {
-    max-width: 100%;
-    margin-top: 40px;
-    padding: 0 20px;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -212,6 +194,7 @@
 }
 
 .editButton {
+  color: #303030;
   align-self: center;
   border-radius: 8px;
   background-color: rgba(255, 173, 105, 0.3);
@@ -229,6 +212,7 @@
 }
 
 .deleteButton {
+  color: #303030;
   align-self: center;
   border-radius: 8px;
   background-color: rgba(255, 105, 105, 0.3);
