@@ -7,7 +7,7 @@ const Trips = () => {
   const trips = [
     {
       title: 'Bali Retreat',
-      dates: 'Oct 8 - 17',
+      date: 'Oct 8 - 17',
       attendees: [
         { name: 'Attendee 1', avatar: 'https://cdn.builder.io/api/v1/image/assets/TEMP/cb3180854754823f7a77ff339ba569e34a604c31c87b2445e003743bc1c2764d?placeholderIfAbsent=true&apiKey=3a931a869e0e4b4bb92008bc01989510' },
         { name: 'Attendee 2', avatar: 'https://cdn.builder.io/api/v1/image/assets/TEMP/cb3180854754823f7a77ff339ba569e34a604c31c87b2445e003743bc1c2764d?placeholderIfAbsent=true&apiKey=3a931a869e0e4b4bb92008bc01989510' },
@@ -20,7 +20,7 @@ const Trips = () => {
     },
     {
       title: 'Cancun Weekend',
-      dates: 'Feb 11 - 14',
+      date: 'Feb 11 - 14',
       attendees: [
         { name: 'Attendee 1', avatar: 'https://cdn.builder.io/api/v1/image/assets/TEMP/cb3180854754823f7a77ff339ba569e34a604c31c87b2445e003743bc1c2764d?placeholderIfAbsent=true&apiKey=3a931a869e0e4b4bb92008bc01989510' },
         { name: 'Attendee 2', avatar: 'https://cdn.builder.io/api/v1/image/assets/TEMP/cb3180854754823f7a77ff339ba569e34a604c31c87b2445e003743bc1c2764d?placeholderIfAbsent=true&apiKey=3a931a869e0e4b4bb92008bc01989510' },

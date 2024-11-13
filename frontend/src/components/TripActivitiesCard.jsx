@@ -7,7 +7,7 @@ const ActivityCard = ({ title, date, activities, dates }) => {
       <div className={styles.activityHeader}>
         <div className={styles.activityTitle}>{title}</div>
         <div className={styles.activityDate}>{date}</div>
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/058cb9265fde56f2fc6b9e7f640464a90124d0d79568f819b2f63ecb7eee905a?placeholderIfAbsent=true&apiKey=3a931a869e0e4b4bb92008bc01989510" alt="" className={styles.calendarIcon} />
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/058cb9265fde56f2fc6b9e7f640464a90124d0d79568f819b2f63ecb7eee905a?placeholderIfAbsent=true&apiKey=3a931a869e0e4b4bb92008bc01989510" alt="Logo" className={styles.calendarIcon} />
       </div>
       <div className={styles.activityDetails}>
         <div className={styles.activityList}>
