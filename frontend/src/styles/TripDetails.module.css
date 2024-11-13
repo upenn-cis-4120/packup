@@ -1,0 +1,78 @@
+.tripDetails {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
+}
+
+.content {
+  padding: 0 78px 40px;
+}
+
+.sectionTitle {
+  color: #303030;
+  font: 400 24px 'Libre Franklin', sans-serif;
+  margin: 43px 0 0 16px;
+}
+
+.activitiesGrid {
+  display: flex;
+  gap: 20px;
+  margin-top: 43px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 47px;
+  max-width: 100%;
+}
+
+.addActivityButton {
+  align-self: center;
+  color: #fff;
+  background-color: #ffad69;
+  box-shadow: 0 4px 4px rgba(255, 173, 105, 0.3);
+  border: none;
+  border-radius: 8px;
+  font-size: 24px;
+  height: 55px;
+  margin-top: 81px;
+  width: 122px;
+  margin: 50px auto;
+  cursor: pointer;
+}
+
+.deleteButton {
+  align-self: right;
+  color: #303030;
+  background-color: rgba(255, 105, 105, 0.3);
+  border: none;
+  border-radius: 8px;
+  font: 400 24px 'Libre Franklin', sans-serif;
+  padding: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .content {
+    padding: 0 20px 40px;
+  }
+
+  .sectionTitle {
+    margin: 40px 0 0 10px;
+  }
+
+  .activitiesGrid {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  .footer {
+    margin-top: 40px;
+    max-width: 100%;
+  }
+}

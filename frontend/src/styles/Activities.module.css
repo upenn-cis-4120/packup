@@ -1,0 +1,224 @@
+.activities {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding-bottom: 280px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 991px) {
+  .activitiesContainer {
+    padding-bottom: 100px;
+  }
+}
+
+.header {
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  color: #303030;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 18px 47px 18px 21px;
+  font: 400 20px 'Libre Franklin', -apple-system, Roboto, Helvetica, sans-serif;
+  border: 1px solid #e3e1e1;
+}
+
+@media (max-width: 991px) {
+  .header {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+.logo {
+  aspect-ratio: 0.94;
+  object-fit: contain;
+  object-position: center;
+  width: 60px;
+  background-color: #000;
+}
+
+.navLinks {
+  display: flex;
+  gap: 40px 51px;
+  margin: auto 0;
+}
+
+@media (max-width: 991px) {
+  .navLinks {
+    max-width: 100%;
+  }
+}
+
+.calendarLink {
+  color: #000;
+}
+
+.activitiesLink {
+  font-weight: 700;
+}
+
+.activitySection {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 60px 0;
+}
+
+@media (max-width: 991px) {
+  .activitySection {
+    max-width: 100%;
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+}
+
+.sectionTitle {
+  color: #000;
+  font: 400 28px 'Libre Franklin', sans-serif;
+  margin-bottom: 38px;
+}
+
+.activitiesGrid {
+  display: flex;
+  gap: 20px;
+  margin-top: 43px;
+}
+
+.activityCard {
+  color: #303030;
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px rgba(255, 173, 105, 0.3);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Libre Franklin', sans-serif;
+  padding: 42px 48px;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .activityCard {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.activityHeader {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  text-align: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+  .activityHeader {
+    max-width: 100%;
+  }
+}
+
+.activityTitle {
+  align-self: stretch;
+  background-color: rgba(255, 173, 105, 0.3);
+  gap: 10px;
+  font-size: 24px;
+  text-align: center;
+  padding: 2px;
+}
+
+.activityDate {
+  font-size: 20px;
+  margin: auto 0;
+}
+
+.calendarIcon {
+  aspect-ratio: 0.52;
+  object-fit: contain;
+  object-position: center;
+  width: 13px;
+  align-self: flex-start;
+  margin-top: 6px;
+}
+
+.activityDetails {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  justify-content: space-between;
+  margin: 58px 0 0 14px;
+}
+
+@media (max-width: 991px) {
+  .activityDetails {
+    margin: 40px 6px 0 10px;
+  }
+}
+
+.activityList {
+  display: flex;
+  flex-direction: column;
+}
+
+.activityItem {
+  margin-top: 25px;
+}
+
+@media (max-width: 991px) {
+  .activityItem {
+    margin-right: 4px;
+  }
+}
+
+.activityDates {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+@media (max-width: 991px) {
+  .activityDates {
+    white-space: initial;
+  }
+}
+
+.dateItem {
+  margin-top: 24px;
+}
+
+.editButton {
+  color: #303030;
+  align-self: center;
+  border-radius: 8px;
+  background-color: rgba(255, 173, 105, 0.3);
+  margin-top: 51px;
+  gap: 10px;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px;
+}
+
+@media (max-width: 991px) {
+  .editButton {
+    margin-top: 40px;
+  }
+}
+
+.deleteButton {
+  color: #303030;
+  align-self: center;
+  border-radius: 8px;
+  background-color: rgba(255, 105, 105, 0.3);
+  margin-top: 22px;
+  gap: 10px;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px;
+}

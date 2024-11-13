@@ -1,0 +1,18 @@
+.attendeeList {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .attendeeItem {
+    display: inline-block;
+  }
+  
+  .attendeeAvatar {
+    aspect-ratio: 0.88;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 22px;
+  }

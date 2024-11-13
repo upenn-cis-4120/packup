@@ -1,0 +1,80 @@
+.tripInfo {
+    margin-top: 51px;
+  }
+  
+  .tripHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .tripTitle {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .tripName {
+    background-color: rgba(255, 173, 105, 0.3);
+    font: 400 28px 'Libre Franklin', sans-serif;
+    color: #303030;
+    padding: 2px;
+    margin: 0;
+  }
+  
+  .tripDate {
+    font: 400 24px 'Libre Franklin', sans-serif;
+    color: #303030;
+    margin: 0;
+  }
+  
+  .tripActions {
+    display: flex;
+    gap: 22px;
+  }
+  
+  .attendees,
+  .editButton {
+    border-radius: 8px;
+    font: 400 24px 'Libre Franklin', sans-serif;
+    color: #303030;
+    padding: 10px;
+  }
+  
+  .attendees {
+    background-color: rgba(176, 101, 196, 0.3);
+  }
+  
+  .editButton {
+    background-color: rgba(255, 173, 105, 0.3);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .descriptionTitle {
+    color: #303030;
+    font: 400 24px 'Libre Franklin', sans-serif;
+    margin: 34px 0 0 10px;
+  }
+  
+  .description {
+    background-color: #fafafa;
+    border-radius: 8px;
+    color: #000;
+    font: 400 20px 'Libre Franklin', sans-serif;
+    margin-top: 39px;
+    min-height: 94px;
+    padding: 35px 10px;
+  }
+  
+  @media (max-width: 991px) {
+    .tripInfo {
+      margin-top: 40px;
+    }
+  
+    .description {
+      max-width: 100%;
+    }
+  }
