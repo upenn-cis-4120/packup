@@ -1,240 +1,240 @@
 .activitiesContainer {
-    background-color: #fff;
-    display: flex;
-    padding-bottom: 128px;
-    flex-direction: column;
-    overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  padding-bottom: 128px;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+@media (max-width: 991px) {
+  .activitiesContainer {
+    padding-bottom: 100px;
   }
-  
-  @media (max-width: 991px) {
-    .activitiesContainer {
-      padding-bottom: 100px;
-    }
-  }
-  
+}
+
+.header {
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  color: #303030;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 18px 47px 18px 21px;
+  font: 400 20px 'Libre Franklin', -apple-system, Roboto, Helvetica, sans-serif;
+  border: 1px solid #e3e1e1;
+}
+
+@media (max-width: 991px) {
   .header {
-    background-color: #fff;
-    display: flex;
-    width: 100%;
-    gap: 20px;
-    color: #303030;
-    text-align: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 18px 47px 18px 21px;
-    font: 400 20px 'Libre Franklin', -apple-system, Roboto, Helvetica, sans-serif;
-    border: 1px solid #e3e1e1;
+    max-width: 100%;
+    padding: 0 20px;
   }
-  
-  @media (max-width: 991px) {
-    .header {
-      max-width: 100%;
-      padding: 0 20px;
-    }
-  }
-  
-  .logo {
-    aspect-ratio: 0.94;
-    object-fit: contain;
-    object-position: center;
-    width: 59px;
-    background-color: #000;
-  }
-  
+}
+
+.logo {
+  aspect-ratio: 0.94;
+  object-fit: contain;
+  object-position: center;
+  width: 60px;
+  background-color: #000;
+}
+
+.navLinks {
+  display: flex;
+  gap: 40px 51px;
+  margin: auto 0;
+}
+
+@media (max-width: 991px) {
   .navLinks {
-    display: flex;
-    gap: 40px 51px;
-    margin: auto 0;
+    max-width: 100%;
   }
-  
-  @media (max-width: 991px) {
-    .navLinks {
-      max-width: 100%;
-    }
-  }
-  
-  .calendarLink {
-    color: #000;
-  }
-  
-  .activitiesLink {
-    font-weight: 700;
-  }
-  
+}
+
+.calendarLink {
+  color: #000;
+}
+
+.activitiesLink {
+  font-weight: 700;
+}
+
+.mainContent {
+  display: flex;
+  margin-top: 57px;
+  width: 100%;
+  flex-direction: column;
+  padding: 0 54px;
+}
+
+@media (max-width: 991px) {
   .mainContent {
-    display: flex;
-    margin-top: 57px;
-    width: 100%;
-    flex-direction: column;
-    padding: 0 54px;
+    max-width: 100%;
+    margin-top: 40px;
+    padding: 0 20px;
   }
-  
-  @media (max-width: 991px) {
-    .mainContent {
-      max-width: 100%;
-      margin-top: 40px;
-      padding: 0 20px;
-    }
-  }
-  
-  .pageTitle {
-    color: #000;
-    text-align: center;
-    align-self: flex-start;
-    font: 400 28px 'Libre Franklin', -apple-system, Roboto, Helvetica, sans-serif;
-  }
-  
+}
+
+.pageTitle {
+  color: #000;
+  text-align: center;
+  align-self: flex-start;
+  font: 400 28px 'Libre Franklin', -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.activitiesWrapper {
+  align-self: flex-end;
+  margin-top: 43px;
+  width: 100%;
+  max-width: 1119px;
+}
+
+@media (max-width: 991px) {
   .activitiesWrapper {
-    align-self: flex-end;
-    margin-top: 43px;
-    width: 100%;
-    max-width: 1119px;
+    max-width: 100%;
+    margin-top: 40px;
   }
-  
-  @media (max-width: 991px) {
-    .activitiesWrapper {
-      max-width: 100%;
-      margin-top: 40px;
-    }
-  }
-  
+}
+
+.activitiesGrid {
+  gap: 20px;
+  display: flex;
+}
+
+@media (max-width: 991px) {
   .activitiesGrid {
-    gap: 20px;
-    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
   }
-  
-  @media (max-width: 991px) {
-    .activitiesGrid {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 0;
-    }
-  }
-  
+}
+
+.activityCard {
+  border-radius: 8px;
+  background-color: #fafafa;
+  box-shadow: 0 4px 4px rgba(255, 173, 105, 0.3);
+  flex-grow: 1;
+  width: 100%;
+  padding: 39px 53px 85px;
+}
+
+@media (max-width: 991px) {
   .activityCard {
-    border-radius: 8px;
-    background-color: #fafafa;
-    box-shadow: 0 4px 4px rgba(255, 173, 105, 0.3);
-    flex-grow: 1;
-    width: 100%;
-    padding: 39px 53px 85px;
+    max-width: 100%;
+    margin-top: 40px;
+    padding: 0 20px;
   }
-  
-  @media (max-width: 991px) {
-    .activityCard {
-      max-width: 100%;
-      margin-top: 40px;
-      padding: 0 20px;
-    }
-  }
-  
+}
+
+.activityHeader {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  text-align: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 991px) {
   .activityHeader {
-    display: flex;
-    width: 100%;
-    gap: 20px;
-    text-align: center;
-    justify-content: space-between;
+    max-width: 100%;
   }
-  
-  @media (max-width: 991px) {
-    .activityHeader {
-      max-width: 100%;
-    }
-  }
-  
-  .activityTitle {
-    align-self: stretch;
-    background-color: rgba(255, 173, 105, 0.3);
-    gap: 10px;
-    font-size: 24px;
-    text-align: center;
-    padding: 2px;
-  }
-  
-  .activityDate {
-    font-size: 20px;
-    margin: auto 0;
-  }
-  
-  .calendarIcon {
-    aspect-ratio: 0.52;
-    object-fit: contain;
-    object-position: center;
-    width: 13px;
-    align-self: flex-start;
-    margin-top: 6px;
-  }
-  
+}
+
+.activityTitle {
+  align-self: stretch;
+  background-color: rgba(255, 173, 105, 0.3);
+  gap: 10px;
+  font-size: 24px;
+  text-align: center;
+  padding: 2px;
+}
+
+.activityDate {
+  font-size: 20px;
+  margin: auto 0;
+}
+
+.calendarIcon {
+  aspect-ratio: 0.52;
+  object-fit: contain;
+  object-position: center;
+  width: 13px;
+  align-self: flex-start;
+  margin-top: 6px;
+}
+
+.activityDetails {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  justify-content: space-between;
+  margin: 58px 0 0 14px;
+}
+
+@media (max-width: 991px) {
   .activityDetails {
-    display: flex;
-    gap: 20px;
-    font-size: 20px;
-    justify-content: space-between;
-    margin: 58px 0 0 14px;
+    margin: 40px 6px 0 10px;
   }
-  
-  @media (max-width: 991px) {
-    .activityDetails {
-      margin: 40px 6px 0 10px;
-    }
-  }
-  
-  .activityList {
-    display: flex;
-    flex-direction: column;
-  }
-  
+}
+
+.activityList {
+  display: flex;
+  flex-direction: column;
+}
+
+.activityItem {
+  margin-top: 25px;
+}
+
+@media (max-width: 991px) {
   .activityItem {
-    margin-top: 25px;
+    margin-right: 4px;
   }
-  
-  @media (max-width: 991px) {
-    .activityItem {
-      margin-right: 4px;
-    }
-  }
-  
+}
+
+.activityDates {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+@media (max-width: 991px) {
   .activityDates {
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    text-align: right;
+    white-space: initial;
   }
-  
-  @media (max-width: 991px) {
-    .activityDates {
-      white-space: initial;
-    }
-  }
-  
-  .dateItem {
-    margin-top: 24px;
-  }
-  
+}
+
+.dateItem {
+  margin-top: 24px;
+}
+
+.editButton {
+  align-self: center;
+  border-radius: 8px;
+  background-color: rgba(255, 173, 105, 0.3);
+  margin-top: 51px;
+  gap: 10px;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px;
+}
+
+@media (max-width: 991px) {
   .editButton {
-    align-self: center;
-    border-radius: 8px;
-    background-color: rgba(255, 173, 105, 0.3);
-    margin-top: 51px;
-    gap: 10px;
-    font-size: 24px;
-    text-align: center;
-    padding: 10px;
+    margin-top: 40px;
   }
-  
-  @media (max-width: 991px) {
-    .editButton {
-      margin-top: 40px;
-    }
-  }
-  
-  .deleteButton {
-    align-self: center;
-    border-radius: 8px;
-    background-color: rgba(255, 105, 105, 0.3);
-    margin-top: 22px;
-    gap: 10px;
-    font-size: 24px;
-    text-align: center;
-    padding: 10px;
-  }
+}
+
+.deleteButton {
+  align-self: center;
+  border-radius: 8px;
+  background-color: rgba(255, 105, 105, 0.3);
+  margin-top: 22px;
+  gap: 10px;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px;
+}

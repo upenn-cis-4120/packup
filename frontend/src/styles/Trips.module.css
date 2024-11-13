@@ -1,104 +1,104 @@
 .trips {
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    padding-bottom: 280;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding-bottom: 280px;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #e3e1e1;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 47px 18px 21px;
+}
+
+.logo {
+  aspect-ratio: 0.94;
+  object-fit: contain;
+  width: 60px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  gap: 40px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  color: #303030;
+  font: 400 20px 'Libre Franklin', sans-serif;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}
+
+.tripSection {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 60px 0;
+}
+
+.sectionTitle {
+  color: #000;
+  font: 400 28px 'Libre Franklin', sans-serif;
+  margin-bottom: 38px;
+}
+
+.tripGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1em;
+  gap: 20px; 
+  width: 100%;
+}
+
+.addTripButton {
+  align-self: center;
+  background-color: #ffad69;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px rgba(255, 173, 105, 0.3);
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  height: 55px;
+  margin-top: 81px;
+  width: 122px;
+  margin: 50px auto;
+}
+
+@media (max-width: 991px) {
+  .trips {
+    padding-bottom: 100px;
   }
-  
+
   .header {
-    background-color: #fff;
-    border-bottom: 1px solid #e3e1e1;
-    display: flex;
-    justify-content: space-between;
-    padding: 18px 47px 18px 21px;
+    padding: 18px 20px;
   }
-  
-  .logo {
-    aspect-ratio: 0.94;
-    object-fit: contain;
-    width: 59px;
-  }
-  
-  .navigation {
-    display: flex;
-    align-items: center;
-  }
-  
+
   .navList {
-    display: flex;
-    gap: 40px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navLink {
-    color: #303030;
-    font: 400 20px 'Libre Franklin', sans-serif;
-    text-decoration: none;
-  }
-  
-  .navLink:hover {
-    text-decoration: underline;
-  }
-  
-  .tripSection {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 57px 57px 0;
-    width: 100%;
-  }
-  
-  .sectionTitle {
-    color: #000;
-    font: 400 28px 'Libre Franklin', sans-serif;
-    margin-bottom: 38px;
-  }
-  
-  .tripGrid {
-    display: flex;
-    flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-between;
-    max-width: 1119px;
-    width: 100%;
   }
-  
+
+  .tripSection {
+    padding: 40px 20px 0;
+  }
+
   .addTripButton {
-    align-self: center;
-    background-color: #ffad69;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 4px rgba(255, 173, 105, 0.3);
-    color: #fff;
-    cursor: pointer;
-    font-size: 24px;
-    height: 55px;
-    margin-top: 81px;
-    width: 122px;
+    margin-top: 40px;
   }
-  
-  @media (max-width: 991px) {
-    .tripPlanner {
-      padding-bottom: 100px;
-    }
-  
-    .header {
-      padding: 18px 20px;
-    }
-  
-    .navList {
-      gap: 20px;
-    }
-  
-    .tripSection {
-      padding: 40px 20px 0;
-    }
-  
-    .addTripButton {
-      margin-top: 40px;
-    }
-  }
+}
