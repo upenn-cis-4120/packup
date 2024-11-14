@@ -57,6 +57,22 @@
   cursor: pointer;
 }
 
+.backButton {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px 0; 
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.backButton:hover {
+  background-color: #e0e0e0;
+}
+
 @media (max-width: 991px) {
   .content {
     padding: 0 20px 40px;

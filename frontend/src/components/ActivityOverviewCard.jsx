@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles/ActivityOverviewCard.module.css';
 
-const ActivityCard = ({ name, date, capacity, attendees, status }) => {
+const ActivityCard = ({ name, date, capacity, attendees, status, onDelete }) => {
   return (
     <article className={styles.activityCard}>
       <div className={styles.activityHeader}>
@@ -23,6 +23,9 @@ const ActivityCard = ({ name, date, capacity, attendees, status }) => {
             <button className={styles.waitlistButton}>Waitlist</button>
           </>
         )}
+        <button className={styles.deleteButton} onClick={onDelete}>
+          Delete
+        </button>
       </div>
     </article>
   );
