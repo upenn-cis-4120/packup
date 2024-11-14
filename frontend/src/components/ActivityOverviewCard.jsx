@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles/ActivityOverviewCard.module.css';
 
-const ActivityCard = ({ name, date, capacity, attendees, status, onDelete }) => {
+const ActivityCard = ({ name, date, capacity, attendees, status, description, onDelete }) => {
   return (
     <article className={styles.activityCard}>
       <div className={styles.activityHeader}>
@@ -9,7 +9,7 @@ const ActivityCard = ({ name, date, capacity, attendees, status, onDelete }) => 
         <p className={styles.activityDate}>{date}</p>
         <p className={styles.activityCapacity}>{capacity}</p>
       </div>
-      <p className={styles.activityDescription}>Description</p>
+      <p className={styles.activityDescription}>{description}</p>
       <div className={styles.activityFooter}>
         <span className={styles.attendees}>{attendees} Attendees</span>
         {status === 'open' ? (

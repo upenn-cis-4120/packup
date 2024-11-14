@@ -15,14 +15,16 @@ const TripDetails = () => {
       date: 'Oct 10',
       capacity: '3/10 Filled',
       attendees: 3,
-      status: 'open'
+      status: 'open',
+      description: 'Placeholder'
     },
     {
       name: 'Taco Tour',
       date: 'Oct 11',
       capacity: '5/5 Filled',
       attendees: 5,
-      status: 'full'
+      status: 'full',
+      description: 'Fake description'
     }
   ]);
 
