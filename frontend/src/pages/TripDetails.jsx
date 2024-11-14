@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../styles/TripDetails.module.css';
 import Header from '../components/Header';
@@ -41,7 +41,7 @@ const TripDetails = () => {
 
   const handleToggleForm = () => {
     setShowForm((prev) => !prev);
-  };  
+  };
 
   return (
     <main className={styles.tripDetails}>
@@ -68,14 +68,16 @@ const TripDetails = () => {
         <footer className={styles.footer}>
           <button
             className={styles.addActivityButton}
-            aria-label="Add new trip"
+            aria-label="Add new activity"
             onClick={handleToggleForm} // Show form when clicked
           >
             +
           </button>
           <button className={styles.deleteButton}>Delete</button>
         </footer>
-        {showForm && <AddActivityForm onAddActivity={handleAddActivity} />}
+        {showForm && (
+          <AddActivityForm onAddActivity={handleAddActivity} onClose={handleToggleForm} />
+        )}
       </section>
     </main>
   );

@@ -119,6 +119,7 @@
   .input {
     border-radius: 8px;
     background-color: #fafafa;
+    color: #303030;
     width: 315px;
     max-width: 100%;
     height: 41px;
@@ -135,6 +136,7 @@
   .textarea {
     border-radius: 8px;
     background-color: #fafafa;
+    color: #303030;
     height: 94px;
     border: 2px solid #ffad69;
     width: 315px;
@@ -154,6 +156,21 @@
     font-family: 'Libre Franklin', -apple-system, Roboto, Helvetica, sans-serif;
     border: none;
     cursor: pointer;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #949494;
+  }
+  
+  .closeButton:hover {
+    color: #343434;
   }
   
   @media (max-width: 991px) {

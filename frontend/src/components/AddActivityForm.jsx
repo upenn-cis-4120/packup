@@ -14,25 +14,28 @@ const InputField = ({ id, label, type = 'text' }) => (
   </>
 );
 
-function AddActivityForm({ onAddActivity }) {
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      const newActivity = {
+function AddActivityForm({ onAddActivity, onClose }) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newActivity = {
         id: Date.now(), // Generate a unique ID
-        name: e.target.name.value,
-        date: e.target.date.value,
-        time: e.target.time.value,
-        description: e.target.description.value,
+      name: e.target.name.value,
+      date: e.target.date.value,
+      time: e.target.time.value,
+      description: e.target.description.value,
         capacity: '0/10 Filled', // Default capacity
         attendees: 0, // Default attendees
         status: 'open', // Default status
-      };
-  
-      onAddActivity(newActivity);
     };
+
+    onAddActivity(newActivity);
+  };
 
   return (
     <form className={styles.container} onSubmit={handleSubmit}>
+      <button type="button" className={styles.closeButton} onClick={onClose}>
+        &times;
+      </button>
       <div className={styles.formContent}>
         <div className={styles.labelColumn}>
           <h2 className={styles.formTitle}>Add Activity</h2>
