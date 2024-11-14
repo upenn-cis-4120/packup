@@ -11,6 +11,7 @@ const TripDetails = () => {
   const [showForm, setShowForm] = useState(false);
   const [activities, setActivities] = useState([
     {
+      id: 1,
       name: 'Scuba Diving',
       date: 'Oct 10',
       capacity: '3/10 Filled',
@@ -19,6 +20,7 @@ const TripDetails = () => {
       description: 'Placeholder'
     },
     {
+      id: 2,
       name: 'Taco Tour',
       date: 'Oct 11',
       capacity: '5/5 Filled',
