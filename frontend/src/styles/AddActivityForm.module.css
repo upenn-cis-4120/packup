@@ -31,7 +31,6 @@
   }
   
   .labelColumn {
-    display: flex;
     flex-direction: column;
     width: 27%;
   }
@@ -52,27 +51,15 @@
   
   .labelWrapper {
     display: flex;
-    margin-top: 46px;
     flex-direction: column;
     align-items: start;
     font-size: 20px;
     padding: 0 14px;
   }
   
-  @media (max-width: 991px) {
-    .labelWrapper {
-      margin-top: 40px;
-    }
-  }
-  
   .label {
+    color: #303030;
     margin-top: 51px;
-  }
-  
-  @media (max-width: 991px) {
-    .label {
-      margin-top: 40px;
-    }
   }
   
   .inputColumn {
