@@ -4,14 +4,11 @@ import styles from '../styles/TripDetails.module.css';
 import Header from '../components/Header';
 import TripInfo from '../components/TripInfo';
 import ActivityCard from '../components/ActivityOverviewCard';
+import AddActivityForm from '../components/AddActivityForm';
 
 const TripDetails = () => {
   const navigate = useNavigate();
-
-  const handleDelete = (id) => {
-    setActivities((prevActivities) => prevActivities.filter((activity) => activity.id !== id));
-  };
-
+  const [showForm, setShowForm] = useState(false);
   const [activities, setActivities] = useState([
     {
       name: 'Scuba Diving',
@@ -30,8 +27,21 @@ const TripDetails = () => {
   ]);
 
   const handleBack = () => {
-    navigate(-1); // Navigate back to the previous page
+    navigate(-1);
   };
+
+  const handleDelete = (id) => {
+    setActivities((prevActivities) => prevActivities.filter((activity) => activity.id !== id));
+  };
+
+  const handleAddActivity = (newActivity) => {
+    setActivities((prevActivities) => [...prevActivities, newActivity]);
+    setShowForm(false);
+  };
+
+  const handleToggleForm = () => {
+    setShowForm((prev) => !prev);
+  };  
 
   return (
     <main className={styles.tripDetails}>
@@ -47,17 +57,25 @@ const TripDetails = () => {
         <TripInfo />
         <h2 className={styles.sectionTitle}>Activities</h2>
         <div className={styles.activitiesGrid}>
-          {activities.map((activity, index) => (
-            <ActivityCard key={index} 
-            {...activity} 
-            onDelete={() => handleDelete(activity.id)}
+          {activities.map((activity) => (
+            <ActivityCard
+              key={activity.id}
+              {...activity}
+              onDelete={() => handleDelete(activity.id)}
             />
           ))}
         </div>
         <footer className={styles.footer}>
-          <button className={styles.addActivityButton} aria-label="Add new trip">+</button>
+          <button
+            className={styles.addActivityButton}
+            aria-label="Add new trip"
+            onClick={handleToggleForm} // Show form when clicked
+          >
+            +
+          </button>
           <button className={styles.deleteButton}>Delete</button>
         </footer>
+        {showForm && <AddActivityForm onAddActivity={handleAddActivity} />}
       </section>
     </main>
   );
