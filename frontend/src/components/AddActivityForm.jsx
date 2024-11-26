@@ -43,6 +43,7 @@ function AddActivityForm({ onAddActivity, onClose }) {
             <div className={styles.label}>Name</div>
             <div className={`${styles.label} ${styles.date}`}>Date</div>
             <div className={`${styles.label} ${styles.time}`}>Time</div>
+            <div className={styles.label}>Location</div>
             <div className={`${styles.label} ${styles.description}`}>Description</div>
           </div>
         </div>
@@ -52,6 +53,7 @@ function AddActivityForm({ onAddActivity, onClose }) {
               <InputField id="name" label="Name" />
               <InputField id="date" label="Date" type="date" />
               <InputField id="time" label="Time" type="time" />
+              <InputField id="location" label="Location" />
               <label htmlFor="description" className={styles['visually-hidden']}>Description</label>
               <textarea
                 id="description"

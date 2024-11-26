@@ -17,7 +17,7 @@ const TripDetails = () => {
       capacity: '3/10 Filled',
       attendees: 3,
       status: 'open',
-      description: 'Placeholder'
+      description: 'Come find Nemo!'
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ const TripDetails = () => {
       capacity: '5/5 Filled',
       attendees: 5,
       status: 'full',
-      description: 'Fake description'
+      description: 'Taco Time'
     }
   ]);
 

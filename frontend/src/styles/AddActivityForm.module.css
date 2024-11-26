@@ -50,22 +50,23 @@
   }
   
   .labelWrapper {
-    display: flex;
+    display: block;
     flex-direction: column;
     align-items: start;
     font-size: 20px;
-    padding: 0 14px;
+    padding: 0 54px;
   }
   
   .label {
     color: #303030;
-    margin-top: 51px;
+    margin-top: 41px;
   }
   
   .inputColumn {
     display: flex;
     flex-direction: column;
     width: 73%;
+    padding-top: 30px;
   }
   
   @media (max-width: 991px) {
@@ -106,6 +107,7 @@
   .input {
     border-radius: 8px;
     background-color: #fafafa;
+    font-family: 'Libre Franklin', -apple-system, Roboto, Helvetica, sans-serif;
     color: #303030;
     width: 315px;
     max-width: 100%;
@@ -123,6 +125,7 @@
   .textarea {
     border-radius: 8px;
     background-color: #fafafa;
+    font-family: 'Libre Franklin', -apple-system, Roboto, Helvetica, sans-serif;
     color: #303030;
     height: 94px;
     border: 2px solid #ffad69;

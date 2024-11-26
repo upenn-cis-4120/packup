@@ -24,6 +24,10 @@
   text-decoration: none;
 }
 
+.navLink:hover {
+  color: #eda143;
+}
+
 @media (max-width: 991px) {
   .header {
     padding: 18px 20px;
