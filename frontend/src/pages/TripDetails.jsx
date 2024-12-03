@@ -17,7 +17,7 @@ const TripDetails = () => {
       id: 1,
       name: 'Scuba Diving',
       date: 'Oct 10',
-      capacity: '3/10 Filled',
+      capacity: '3/10',
       attendees: 3,
       status: 'open',
       description: 'Come find Nemo!'
@@ -26,7 +26,7 @@ const TripDetails = () => {
       id: 2,
       name: 'Taco Tour',
       date: 'Oct 11',
-      capacity: '5/5 Filled',
+      capacity: '5/5',
       attendees: 5,
       status: 'full',
       description: 'Taco Time'
