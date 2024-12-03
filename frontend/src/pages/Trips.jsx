@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/Trips.module.css';
 import Header from '../components/Header';
 import TripCard from '../components/TripCard';
+import NewTripForm from '../components/NewTripForm';
 
 const Trips = () => {
-  const trips = [
+  const [trips, setTrips] = useState([
     {
       title: 'Bali Retreat',
       date: 'Oct 8 - 17',
@@ -34,7 +35,21 @@ const Trips = () => {
         { name: 'Attendee 10', avatar: 'https://cdn.builder.io/api/v1/image/assets/TEMP/cb3180854754823f7a77ff339ba569e34a604c31c87b2445e003743bc1c2764d?placeholderIfAbsent=true&apiKey=3a931a869e0e4b4bb92008bc01989510' },
       ],
     },
-  ];
+  ]);
+
+  const [showTripForm, setShowTripForm] = useState(false);
+
+  const handleAddTrip = (newTrip) => {
+    setTrips((prevTrips) => [
+      ...prevTrips,
+      {
+        title: newTrip.tripName,
+        date: `${newTrip.startDate} - ${newTrip.endDate}`,
+        attendees: [],
+      },
+    ]);
+    setShowTripForm(false);
+  };
 
   return (
     <main className={styles.trips}>
@@ -46,8 +61,20 @@ const Trips = () => {
             <TripCard key={index} {...trip} />
           ))}
         </div>
+        <button
+          className={styles.addTripButton}
+          aria-label="Add new trip"
+          onClick={() => setShowTripForm(true)}
+        >
+          +
+        </button>
       </section>
-      <button className={styles.addTripButton} aria-label="Add new trip">+</button>
+      {showTripForm && (
+        <NewTripForm
+          onAddTrip={handleAddTrip}
+          onClose={() => setShowTripForm(false)}
+        />
+      )}
     </main>
   );
 };
