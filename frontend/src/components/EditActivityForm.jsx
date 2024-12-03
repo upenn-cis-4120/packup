@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from '../styles/AddActivityForm.module.css';
 
-const InputField = ({ id, label, type = 'text' }) => (
+const InputField = ({ id, label, type = 'text', defaultValue }) => (
   <>
     <label htmlFor={id} className={styles['visually-hidden']}>{label}</label>
     <input
       id={id}
       type={type}
+      defaultValue={defaultValue}
       className={styles.input}
       placeholder={label}
       aria-label={label}
@@ -14,21 +15,19 @@ const InputField = ({ id, label, type = 'text' }) => (
   </>
 );
 
-function AddActivityForm({ onAddActivity, onClose }) {
+function EditActivityForm({ activity, onUpdateActivity, onClose }) {
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newActivity = {
-        id: Date.now(), // Generate a unique ID
+    const updatedActivity = {
+      ...activity,
       name: e.target.name.value,
       date: e.target.date.value,
       time: e.target.time.value,
+      location: e.target.location.value,
       description: e.target.description.value,
-        capacity: '0/10 Filled', // Default capacity
-        attendees: 0, // Default attendees
-        status: 'open', // Default status
     };
 
-    onAddActivity(newActivity);
+    onUpdateActivity(updatedActivity);
   };
 
   return (
@@ -38,7 +37,7 @@ function AddActivityForm({ onAddActivity, onClose }) {
       </button>
       <div className={styles.formContent}>
         <div className={styles.labelColumn}>
-          <h2 className={styles.formTitle}>Add Activity</h2>
+          <h2 className={styles.formTitle}>Edit Activity</h2>
           <div className={styles.labelWrapper}>
             <div className={styles.label}>Name</div>
             <div className={styles.label}>Date</div>
@@ -50,19 +49,20 @@ function AddActivityForm({ onAddActivity, onClose }) {
         <div className={styles.inputColumn}>
           <div className={styles.inputWrapper}>
             <div className={styles.inputGroup}>
-              <InputField id="name" label="Name" />
-              <InputField id="date" label="Date" type="date" />
-              <InputField id="time" label="Time" type="time" />
-              <InputField id="location" label="Location" />
+              <InputField id="name" label="Name" defaultValue={activity.name} />
+              <InputField id="date" label="Date" type="date" defaultValue={activity.date} />
+              <InputField id="time" label="Time" type="time" defaultValue={activity.time} />
+              <InputField id="location" label="Location" defaultValue={activity.location} />
               <label htmlFor="description" className={styles['visually-hidden']}>Description</label>
               <textarea
                 id="description"
                 className={styles.textarea}
                 placeholder="Description"
                 aria-label="Description"
+                defaultValue={activity.description}
               ></textarea>
               <button type="submit" className={styles.submitButton}>
-                Create
+                Save Changes
               </button>
             </div>
           </div>
@@ -72,4 +72,4 @@ function AddActivityForm({ onAddActivity, onClose }) {
   );
 }
 
-export default AddActivityForm;
+export default EditActivityForm;

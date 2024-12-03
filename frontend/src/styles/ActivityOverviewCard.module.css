@@ -59,8 +59,31 @@
   padding: 10px;
 }
 
+.editButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6c757d;
+  transition: color 0.2s ease-in-out;
+}
+
+.editButton:hover {
+  color: rgb(255, 173, 105);;
+}
+
 .attendees {
+  color: #303030;
   background-color: rgba(176, 101, 196, 0.3);
+}
+
+.attendees:hover {
+  background-color: rgba(175, 101, 196, 0.468);
+}
+
+.joinButton:hover,
+.maybeButton:hover,
+.waitlistButton:hover {
+  background-color: rgba(255, 173, 105, 0.607);
 }
 
 .joinButton,

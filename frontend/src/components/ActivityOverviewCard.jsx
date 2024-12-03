@@ -1,13 +1,17 @@
 import React from 'react';
+import { PencilIcon } from '@primer/octicons-react';
 import styles from '../styles/ActivityOverviewCard.module.css';
 
-const ActivityCard = ({ name, date, capacity, attendees, status, description, onDelete }) => {
+const ActivityCard = ({ name, date, capacity, attendees, status, description, onDelete, onEdit }) => {
   return (
     <article className={styles.activityCard}>
       <div className={styles.activityHeader}>
         <h3 className={styles.activityName}>{name}</h3>
         <p className={styles.activityDate}>{date}</p>
         <p className={styles.activityCapacity}>{capacity}</p>
+        <button className={styles.editButton} onClick={onEdit} aria-label="Edit Activity">
+          <PencilIcon size={24} />
+        </button>
       </div>
       <p className={styles.activityDescription}>{description}</p>
       <div className={styles.activityFooter}>

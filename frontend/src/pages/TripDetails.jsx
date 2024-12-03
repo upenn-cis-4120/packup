@@ -5,10 +5,13 @@ import Header from '../components/Header';
 import TripInfo from '../components/TripInfo';
 import ActivityCard from '../components/ActivityOverviewCard';
 import AddActivityForm from '../components/AddActivityForm';
+import EditActivityForm from '../components/EditActivityForm';
 
 const TripDetails = () => {
   const navigate = useNavigate();
   const [showForm, setShowForm] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
+  const [currentActivity, setCurrentActivity] = useState(null);
   const [activities, setActivities] = useState([
     {
       id: 1,
@@ -47,6 +50,25 @@ const TripDetails = () => {
     setShowForm((prev) => !prev);
   };
 
+  const openEditForm = (activity) => {
+    setCurrentActivity(activity);
+    setIsEditing(true);
+  };
+
+  const closeEditForm = () => {
+    setCurrentActivity(null);
+    setIsEditing(false);
+  };
+
+  const handleUpdateActivity = (updatedActivity) => {
+    setActivities((prevActivities) =>
+      prevActivities.map((activity) =>
+        activity.id === updatedActivity.id ? updatedActivity : activity
+      )
+    );
+    closeEditForm();
+  };
+
   return (
     <main className={styles.tripDetails}>
       <Header />
@@ -66,6 +88,7 @@ const TripDetails = () => {
               key={activity.id}
               {...activity}
               onDelete={() => handleDelete(activity.id)}
+              onEdit={() => openEditForm(activity)} 
             />
           ))}
         </div>
@@ -73,7 +96,7 @@ const TripDetails = () => {
           <button
             className={styles.addActivityButton}
             aria-label="Add new activity"
-            onClick={handleToggleForm} // Show form when clicked
+            onClick={handleToggleForm}
           >
             +
           </button>
@@ -81,6 +104,13 @@ const TripDetails = () => {
         </footer>
         {showForm && (
           <AddActivityForm onAddActivity={handleAddActivity} onClose={handleToggleForm} />
+        )}
+        {isEditing && currentActivity && (
+          <EditActivityForm
+            activity={currentActivity}
+            onUpdateActivity={handleUpdateActivity}
+            onClose={closeEditForm}
+          />
         )}
       </section>
     </main>
