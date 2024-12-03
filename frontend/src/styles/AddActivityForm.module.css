@@ -162,6 +162,29 @@
   .closeButton:hover {
     color: #343434;
   }
+
+  .deleteButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ff4d4f;
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .deleteButton:hover {
+    background-color: rgba(255, 77, 79, 0.1);
+  }
+  
+  .deleteButton svg {
+    fill: #ff4d4f;
+    width: 24px;
+    height: 24px;
+  }  
   
   @media (max-width: 991px) {
     .submitButton {

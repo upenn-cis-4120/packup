@@ -1,4 +1,5 @@
 import React from 'react';
+import { TrashIcon } from '@primer/octicons-react';
 import styles from '../styles/AddActivityForm.module.css';
 
 const InputField = ({ id, label, type = 'text', defaultValue }) => (
@@ -15,7 +16,7 @@ const InputField = ({ id, label, type = 'text', defaultValue }) => (
   </>
 );
 
-function EditActivityForm({ activity, onUpdateActivity, onClose }) {
+function EditActivityForm({ activity, onUpdateActivity, onClose, onDelete }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const updatedActivity = {
@@ -28,6 +29,12 @@ function EditActivityForm({ activity, onUpdateActivity, onClose }) {
     };
 
     onUpdateActivity(updatedActivity);
+  };
+
+  const handleDelete = () => {
+    if (window.confirm("Are you sure you want to delete this activity?")) {
+      onDelete();
+    }
   };
 
   return (
@@ -67,6 +74,16 @@ function EditActivityForm({ activity, onUpdateActivity, onClose }) {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <button
+          type="button"
+          className={styles.deleteButton}
+          onClick={handleDelete}
+          aria-label="Delete Activity"
+        >
+          <TrashIcon size={24} />
+        </button>
       </div>
     </form>
   );

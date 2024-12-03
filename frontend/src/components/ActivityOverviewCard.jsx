@@ -73,9 +73,6 @@ const ActivityCard = ({
             <button className={styles.waitlistButton}>Waitlist</button>
           </>
         )}
-        <button className={styles.deleteButton} onClick={onDelete}>
-          Delete
-        </button>
       </div>
     </article>
   );
