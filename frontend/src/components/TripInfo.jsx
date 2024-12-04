@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PencilIcon } from '@primer/octicons-react';
+import { PencilIcon, FileMediaIcon } from '@primer/octicons-react';
 import styles from '../styles/TripInfo.module.css';
 import EditTripForm from './EditTripForm';
 
@@ -31,6 +31,20 @@ const TripInfo = () => {
     return new Intl.DateTimeFormat('en-US', options).format(new Date(date));
   };
 
+  const [image, setImage] = useState(null);
+
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+
   return (
     <>
       <section className={styles.tripInfo}>
@@ -43,11 +57,29 @@ const TripInfo = () => {
           </div>
           <div className={styles.tripActions}>
             <span className={styles.attendees}>7 Attendees</span>
+            {/* Camera Icon Button */}
+            <div className={styles.headerActions}>
+              <button className={styles.editButton} onClick={() => document.getElementById('fileInput').click()}>
+                <FileMediaIcon size={24} />
+              </button>
+              <input
+                type="file"
+                id="fileInput"
+                style={{ display: 'none' }}
+                accept="image/*"
+                onChange={handleImageUpload}
+              />
+            </div>
             <button className={styles.editButton} onClick={handleEditClick} aria-label="Edit Activity">
               <PencilIcon size={24} />
             </button>
           </div>
         </div>
+        {image && (
+          <div className={styles.uploadedImage}>
+            <img src={image} alt="Uploaded" />
+          </div>
+        )}
         <h2 className={styles.descriptionTitle}>Description</h2>
         <p className={styles.description}>{trip.description}</p>
       </section>

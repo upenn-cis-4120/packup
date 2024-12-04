@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FileMediaIcon } from '@primer/octicons-react';
 import styles from '../styles/TripDetails.module.css';
 import Header from '../components/Header';
 import TripInfo from '../components/TripInfo';
