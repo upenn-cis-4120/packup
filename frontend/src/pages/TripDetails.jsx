@@ -110,6 +110,7 @@ const TripDetails = () => {
             activity={currentActivity}
             onUpdateActivity={handleUpdateActivity}
             onClose={closeEditForm}
+            onDelete={() => handleDelete(currentActivity.id)}
           />
         )}
       </section>

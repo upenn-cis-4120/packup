@@ -9,7 +9,6 @@ const ActivityCard = ({
   attendees, 
   status, 
   description, 
-  onDelete, 
   onEdit 
 }) => {
   const [isJoined, setIsJoined] = useState(false);

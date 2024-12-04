@@ -23,7 +23,7 @@ function AddActivityForm({ onAddActivity, onClose }) {
       date: e.target.date.value,
       time: e.target.time.value,
       description: e.target.description.value,
-        capacity: '0/10 Filled', // Default capacity
+        capacity: '0/10', // Default capacity
         attendees: 0, // Default attendees
         status: 'open', // Default status
     };
