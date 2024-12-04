@@ -1,11 +1,15 @@
 .activityCard {
   background-color: #fafafa;
   border-radius: 8px;
-  box-shadow: 0 4px 4px rgba(255, 173, 105, 0.3);
+  box-shadow: 0 5px 5px rgba(255, 173, 105, 0.3);
   color: #303030;
   font: 400 20px 'Libre Franklin', sans-serif;
   padding: 39px 48px 23px;
   width: 100%;
+}
+
+.activityCard.joined {
+  box-shadow: 0 5px 5px rgba(176, 101, 196, 0.4);
 }
 
 .activityHeader {

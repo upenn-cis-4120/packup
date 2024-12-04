@@ -29,7 +29,7 @@ const TripDetails = () => {
       capacity: '5/5',
       attendees: 5,
       status: 'full',
-      description: 'Taco Time'
+      description: "It's Taco Time"
     }
   ]);
 
@@ -73,13 +73,13 @@ const TripDetails = () => {
     <main className={styles.tripDetails}>
       <Header />
       <section className={styles.content}>
-        <button
+        {/* <button
           className={styles.backButton}
           onClick={handleBack}
           aria-label="Go back to trip card"
         >
           Back
-        </button>
+        </button> */}
         <TripInfo />
         <h2 className={styles.sectionTitle}>Activities</h2>
         <div className={styles.activitiesGrid}>
@@ -100,7 +100,7 @@ const TripDetails = () => {
           >
             +
           </button>
-          <button className={styles.deleteButton}>Delete</button>
+          {/* <button className={styles.deleteButton}>Delete</button> */}
         </footer>
         {showForm && (
           <AddActivityForm onAddActivity={handleAddActivity} onClose={handleToggleForm} />

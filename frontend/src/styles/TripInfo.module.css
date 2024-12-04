@@ -48,9 +48,13 @@
   }
   
   .editButton {
-    background-color: rgba(255, 173, 105, 0.3);
+    /* background-color: rgba(255, 173, 105, 0.3); */
     border: none;
     cursor: pointer;
+  }
+
+  .editButton:hover {
+    color: rgb(255, 173, 105);;
   }
   
   .descriptionTitle {

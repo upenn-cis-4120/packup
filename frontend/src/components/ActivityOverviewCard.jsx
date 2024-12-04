@@ -26,13 +26,18 @@ const ActivityCard = ({
     }
   };
 
+  const formatDate = (date) => {
+    const options = { month: 'short', day: 'numeric'};
+    return new Intl.DateTimeFormat('en-US', options).format(new Date(date));
+  };
+
   const updatedCapacity = `${currentAttendees}/${capacity.split('/')[1]} Filled`;
 
   return (
-    <article className={styles.activityCard}>
+    <article className={`${styles.activityCard} ${isJoined ? styles.joined : ''}`}>
       <div className={styles.activityHeader}>
         <h3 className={styles.activityName}>{name}</h3>
-        <p className={styles.activityDate}>{date}</p>
+        <p className={styles.activityDate}>{formatDate(date)}</p>
         <p className={styles.activityCapacity}>{updatedCapacity}</p>
         <button className={styles.editButton} onClick={onEdit} aria-label="Edit Activity">
           <PencilIcon size={24} />
@@ -62,7 +67,7 @@ const ActivityCard = ({
                 onClick={handleJoinToggle}
                 aria-label="Joined"
               >
-                Joined
+                Joined!
               </button>
             )}
           </>
