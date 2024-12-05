@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PencilIcon } from '@primer/octicons-react';
+import { PencilIcon, LocationIcon, CreditCardIcon } from '@primer/octicons-react';
 import styles from '../styles/ActivityOverviewCard.module.css';
 
 const ActivityCard = ({ 
@@ -9,6 +9,8 @@ const ActivityCard = ({
   attendees, 
   status, 
   description, 
+  location, 
+  cost, 
   onEdit 
 }) => {
   const [isJoined, setIsJoined] = useState(false);
@@ -27,7 +29,7 @@ const ActivityCard = ({
   };
 
   const formatDate = (date) => {
-    const options = { month: 'short', day: 'numeric'};
+    const options = { month: 'short', day: 'numeric' };
     return new Intl.DateTimeFormat('en-US', options).format(new Date(date));
   };
 
@@ -43,6 +45,22 @@ const ActivityCard = ({
           <PencilIcon size={24} />
         </button>
       </div>
+      {(location || cost) && (
+        <div className={styles.activityLocation}>
+          {location && (
+            <div className={styles.locationWrapper}>
+              <LocationIcon size={24} className={styles.icon} />
+              <span>{location}</span>
+            </div>
+          )}
+          {cost && (
+            <div className={styles.costWrapper}>
+              <CreditCardIcon size={24} className={styles.icon} />
+              <span>{`$${cost}`}</span>
+            </div>
+          )}
+        </div>
+      )}
       <p className={styles.activityDescription}>{description}</p>
       <div className={styles.activityFooter}>
         <span className={styles.attendees}>{currentAttendees} Attendees</span>

@@ -17,16 +17,18 @@ const TripDetails = () => {
     {
       id: 1,
       name: 'Scuba Diving',
-      date: 'Oct 10',
+      date: '2024-10-10',
       capacity: '3/10',
       attendees: 3,
       status: 'open',
-      description: 'Come find Nemo!'
+      description: 'Come find Nemo!',
+      location: 'Manta Point',
+      cost: '30'
     },
     {
       id: 2,
       name: 'Taco Tour',
-      date: 'Oct 11',
+      date: '2024-10-11',
       capacity: '5/5',
       attendees: 5,
       status: 'full',

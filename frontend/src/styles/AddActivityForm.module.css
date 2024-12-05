@@ -185,6 +185,17 @@
     width: 24px;
     height: 24px;
   }  
+
+  .imagePreview {
+    margin-top: 0px;
+  }
+  
+  .previewImage {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
   
   @media (max-width: 991px) {
     .submitButton {

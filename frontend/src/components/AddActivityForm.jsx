@@ -22,6 +22,8 @@ function AddActivityForm({ onAddActivity, onClose }) {
       name: e.target.name.value,
       date: e.target.date.value,
       time: e.target.time.value,
+      location: e.target.location.value,
+      cost: e.target.cost.value,
       description: e.target.description.value,
         capacity: '0/10', // Default capacity
         attendees: 0, // Default attendees
@@ -44,6 +46,7 @@ function AddActivityForm({ onAddActivity, onClose }) {
             <div className={styles.label}>Date</div>
             <div className={styles.label}>Time</div>
             <div className={styles.label}>Location</div>
+            <div className={styles.label}>Cost</div>
             <div className={styles.label}>Description</div>
           </div>
         </div>
@@ -54,6 +57,7 @@ function AddActivityForm({ onAddActivity, onClose }) {
               <InputField id="date" label="Date" type="date" />
               <InputField id="time" label="Time" type="time" />
               <InputField id="location" label="Location" />
+              <InputField id="cost" label="Cost" />
               <label htmlFor="description" className={styles['visually-hidden']}>Description</label>
               <textarea
                 id="description"

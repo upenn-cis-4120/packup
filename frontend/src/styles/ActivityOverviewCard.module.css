@@ -6,6 +6,9 @@
   font: 400 20px 'Libre Franklin', sans-serif;
   padding: 39px 48px 23px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .activityCard.joined {
@@ -45,7 +48,7 @@
 }
 
 .activityDescription {
-  margin: 22px 0 0 23px;
+  margin: 22px 0 0 0px;
 }
 
 .activityFooter {
@@ -97,6 +100,31 @@
   background-color: rgba(255, 173, 105, 0.3);
   border: none;
   cursor: pointer;
+}
+
+.activityLocation {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #6c757d;
+  margin: 10px 0;
+  gap: 130px;
+}
+
+.locationIcon {
+  margin-right: 2px;
+  color: #ffad69;
+}
+
+.locationWrapper,
+.costWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  color: #ffad69;
 }
 
 .fullStatus {
