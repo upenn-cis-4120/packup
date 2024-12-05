@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/AddActivityForm.module.css';
 
 const InputField = ({ id, label, type = 'text' }) => (
@@ -15,6 +15,20 @@ const InputField = ({ id, label, type = 'text' }) => (
 );
 
 function NewTripForm({ onAddTrip, onClose }) {
+  const [imagePreview, setImagePreview] = useState(null);
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImagePreview(reader.result);
+      };
+      reader.readAsDataURL(file);
+      setImageFile(file);
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const newTrip = {
@@ -23,6 +37,7 @@ function NewTripForm({ onAddTrip, onClose }) {
       startDate: e.target.startDate.value,
       endDate: e.target.endDate.value,
       description: e.target.description.value,
+      image: imagePreview,
     };
 
     onAddTrip(newTrip);
@@ -40,6 +55,7 @@ function NewTripForm({ onAddTrip, onClose }) {
             <div className={styles.label}>Trip Name</div>
             <div className={styles.label}>Start Date</div>
             <div className={styles.label}>End Date</div>
+            <div className={styles.label}>Image</div>
             <div className={styles.label}>Description</div>
           </div>
         </div>
@@ -50,6 +66,20 @@ function NewTripForm({ onAddTrip, onClose }) {
               <InputField id="startDate" label="Start Date" type="date" />
               <InputField id="endDate" label="End Date" type="date" />
               <label htmlFor="description" className={styles['visually-hidden']}>Description</label>
+              <label htmlFor="image" className={styles['visually-hidden']}>Image</label>
+              <input
+                id="image"
+                type="file"
+                className={styles.input}
+                accept="image/*"
+                onChange={handleImageChange}
+                aria-label="Upload Image"
+              />
+              {/* {imagePreview && (
+                <div className={styles.imagePreview}>
+                  <img src={imagePreview} alt="Image Preview" className={styles.previewImage} />
+                </div>
+              )} */}
               <textarea
                 id="description"
                 className={styles.textarea}
