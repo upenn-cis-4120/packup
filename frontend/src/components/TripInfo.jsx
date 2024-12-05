@@ -8,9 +8,10 @@ const TripInfo = () => {
   const [trip, setTrip] = useState({
     id: 1,
     tripName: 'Bali Retreat',
-    startDate: '2024-10-08',
-    endDate: '2024-10-17',
+    startDate: '2024-10-09',
+    endDate: '2024-10-18',
     description: 'This will be a fun trip!',
+    image: 'https://www.johansens.com/wp-content/uploads/2016/08/Thailand-AYANA-Estate-Bali-73-e1673272835586.jpg',
   });
 
   const handleEditClick = () => {
@@ -31,7 +32,7 @@ const TripInfo = () => {
     return new Intl.DateTimeFormat('en-US', options).format(new Date(date));
   };
 
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState('https://www.johansens.com/wp-content/uploads/2016/08/Thailand-AYANA-Estate-Bali-73-e1673272835586.jpg');
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
@@ -57,7 +58,6 @@ const TripInfo = () => {
           </div>
           <div className={styles.tripActions}>
             <span className={styles.attendees}>7 Attendees</span>
-            {/* Camera Icon Button */}
             <div className={styles.headerActions}>
               <button className={styles.editButton} onClick={() => document.getElementById('fileInput').click()}>
                 <FileMediaIcon size={24} />

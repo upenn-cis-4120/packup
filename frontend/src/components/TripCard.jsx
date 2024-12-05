@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from '../styles/TripCard.module.css';
 import AttendeeList from '../components/AttendeeList';
 
-const TripCard = ({ title, date, attendees }) => {
+const TripCard = ({ title, date, image, attendees }) => {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
@@ -12,6 +12,11 @@ const TripCard = ({ title, date, attendees }) => {
 
   return (
     <div className={styles.tripCard}>
+      <div className={styles.uploadedImage}>
+        {image && (
+          <img src={image} alt="Uploaded" />
+        )}
+      </div>
       <div className={styles.tripHeader}>
         <div className={styles.tripTitle}>{title}</div>
         <div className={styles.tripDate}>{date}</div>
