@@ -16,8 +16,28 @@
     font: 400 24px 'Libre Franklin', sans-serif;
     margin: 43px 0 0 16px;
   }
+
+  .imageContainer {
+    text-align: center;
+    margin: 20px 0;
+  }
   
-  p {
+  .Image {
+    width: 60%;
+    height: auto; 
+    border-radius: 8px; 
+    display: inline-block;
+  }
+
+  h1 {
+    color: #303030;
+    font: 500 'Libre Franklin', sans-serif;
+    font-size: 32px;
+    line-height: 2.0;
+    margin: 20px 16px 0;
+  }
+  
+  p, ul {
     color: #303030;
     font: 300 18px 'Libre Franklin', sans-serif;
     line-height: 1.6;
