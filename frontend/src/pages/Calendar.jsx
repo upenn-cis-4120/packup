@@ -9,10 +9,18 @@ const Calendar = () => {
   const [trips] = useState([
     {
       startDate: "2024-12-08",
-      endDate: "2024-12-17",
+      endDate: "2024-12-18",
       activities: [
         { name: "Scuba Diving", date: "2024-12-10" },
         { name: "Street Food Tour", date: "2024-12-11" },
+      ],
+    },
+    {
+      startDate: "2025-02-11",
+      endDate: "2025-02-15",
+      activities: [
+        { name: "Chichen Itza", date: "2025-02-12" },
+        { name: "Isla Mujeres", date: "2025-02-14" },
       ],
     },
   ]);
