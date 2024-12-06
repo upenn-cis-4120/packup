@@ -19,7 +19,7 @@ const TripDetails = () => {
       id: 1,
       name: 'Scuba Diving',
       date: '2024-10-10',
-      capacity: '3/10',
+      capacity: '3/7',
       attendees: 3,
       attendeelist: ['Bob', 'Charlie', 'Dave'],
       status: 'open',

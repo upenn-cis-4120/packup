@@ -17,15 +17,21 @@ const InputField = ({ id, label, type = 'text' }) => (
 function AddActivityForm({ onAddActivity, onClose }) {
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    const name = e.target.name.value || 'Unnamed Activity';
+    const capacity = e.target.capacity.value || '7';
+    const date = e.target.date.value || '2024-01-01';
+    
     const newActivity = {
-        id: Date.now(), // Generate a unique ID
-      name: e.target.name.value,
-      date: e.target.date.value,
+      id: Date.now(), // Generate a unique ID
+      name: name,
+      date: date,
       time: e.target.time.value,
+      capacity: `0/${capacity}`,
       location: e.target.location.value,
       cost: e.target.cost.value,
       description: e.target.description.value,
-        capacity: '0/10', // Default capacity
+        // capacity: '0/10', // Default capacity
         attendees: 0, // Default attendees
         status: 'open', // Default status
     };
@@ -45,6 +51,7 @@ function AddActivityForm({ onAddActivity, onClose }) {
             <div className={styles.label}>Name</div>
             <div className={styles.label}>Date</div>
             <div className={styles.label}>Time</div>
+            <div className={styles.label}>Capacity</div>
             <div className={styles.label}>Location</div>
             <div className={styles.label}>Cost</div>
             <div className={styles.label}>Description</div>
@@ -56,6 +63,7 @@ function AddActivityForm({ onAddActivity, onClose }) {
               <InputField id="name" label="Name" />
               <InputField id="date" label="Date" type="date" />
               <InputField id="time" label="Time" type="time" />
+              <InputField id="capacity" label="Capacity" type="number" />
               <InputField id="location" label="Location" />
               <InputField id="cost" label="Cost" />
               <label htmlFor="description" className={styles['visually-hidden']}>Description</label>

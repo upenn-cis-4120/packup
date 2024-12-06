@@ -24,6 +24,7 @@ function EditActivityForm({ activity, onUpdateActivity, onClose, onDelete }) {
       name: e.target.name.value,
       date: e.target.date.value,
       time: e.target.time.value,
+      capacity: `${activity.capacity.split('/')[0]}/${e.target.capacity.value}`,
       location: e.target.location.value,
       description: e.target.description.value,
       cost: e.target.cost.value,
@@ -51,6 +52,7 @@ function EditActivityForm({ activity, onUpdateActivity, onClose, onDelete }) {
             <div className={styles.label}>Name</div>
             <div className={styles.label}>Date</div>
             <div className={styles.label}>Time</div>
+            <div className={styles.label}>Capacity</div>
             <div className={styles.label}>Location</div>
             <div className={styles.label}>Cost</div>
             <div className={styles.label}>Description</div>
@@ -62,6 +64,7 @@ function EditActivityForm({ activity, onUpdateActivity, onClose, onDelete }) {
               <InputField id="name" label="Name" defaultValue={activity.name} />
               <InputField id="date" label="Date" type="date" defaultValue={activity.date} />
               <InputField id="time" label="Time" type="time" defaultValue={activity.time} />
+              <InputField id="capacity" label="Capacity" type="capacity" defaultValue={activity.capacity.split('/')[1]}/>
               <InputField id="location" label="Location" defaultValue={activity.location} />
               <InputField id="cost" label="Cost" defaultValue={activity.cost} />
               <label htmlFor="description" className={styles['visually-hidden']}>Description</label>
