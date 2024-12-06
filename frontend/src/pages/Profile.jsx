@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../styles/Profile.module.css';
 import Header from '../components/Header';
+import aliceImage from '../images/alice.png';
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -14,7 +15,12 @@ const Profile = () => {
     <main className={styles.profile}>
       <Header />
       <section className={styles.profileSection}>
-        <h1 className={styles.sectionTitle}>Your Profile</h1>
+        <div className={styles.profileHeader}>
+          <h1 className={styles.sectionTitle}>Hi, Alice</h1> 
+          <div className={styles.profileImage}>
+                <img src={aliceImage} alt="Alice" className={styles.image} />
+            </div>
+        </div>
         <div className={styles.cardContainer}>
           <div className={styles.card}>
             <h2 className={styles.cardTitle}>Account</h2>
