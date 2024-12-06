@@ -2,16 +2,19 @@ import React, { useState } from 'react';
 import { PencilIcon, FileMediaIcon } from '@primer/octicons-react';
 import styles from '../styles/TripInfo.module.css';
 import EditTripForm from './EditTripForm';
+import AttendeesModal from './AttendeesModal';
 
 const TripInfo = () => {
   const [isEditing, setIsEditing] = useState(false);
+  const [isAttendeesModalOpen, setIsAttendeesModalOpen] = useState(false);
   const [trip, setTrip] = useState({
     id: 1,
     tripName: 'Bali Retreat',
     startDate: '2024-10-09',
     endDate: '2024-10-18',
-    description: 'This will be a fun trip!',
+    description: 'This will be a fun trip! Join us as we plan a tropical getaway to Bali, where pristine beaches, lush rice terraces, and vibrant culture await. Whether you are seeking adventure with water sports and hiking, or relaxation, there is bound to be some activity you will like!',
     image: 'https://www.johansens.com/wp-content/uploads/2016/08/Thailand-AYANA-Estate-Bali-73-e1673272835586.jpg',
+    attendees: ['Alice (You)', 'Bob', 'Charlie', 'Dave', 'Eve', 'Frank', 'Grace'],
   });
 
   const handleEditClick = () => {
@@ -25,6 +28,10 @@ const TripInfo = () => {
 
   const handleCloseForm = () => {
     setIsEditing(false);
+  };
+
+  const toggleAttendeesModal = () => {
+    setIsAttendeesModalOpen((prev) => !prev);
   };
 
   const formatDate = (date) => {
@@ -57,7 +64,9 @@ const TripInfo = () => {
             </p>
           </div>
           <div className={styles.tripActions}>
-            <span className={styles.attendees}>7 Attendees</span>
+            <button className={styles.attendees} onClick={toggleAttendeesModal}>
+              {trip.attendees.length} Attendees
+            </button>
             <div className={styles.headerActions}>
               <button className={styles.editButton} onClick={() => document.getElementById('fileInput').click()}>
                 <FileMediaIcon size={24} />
@@ -89,6 +98,13 @@ const TripInfo = () => {
           trip={trip}
           onEditTrip={handleEditTrip}
           onClose={handleCloseForm}
+        />
+      )}
+
+      {isAttendeesModalOpen && (
+        <AttendeesModal
+          attendees={trip.attendees}
+          onClose={toggleAttendeesModal}
         />
       )}
     </>

@@ -11,7 +11,8 @@ const ActivityCard = ({
   description, 
   location, 
   cost, 
-  onEdit 
+  onEdit, 
+  onCheckAttendees, 
 }) => {
   const [isJoined, setIsJoined] = useState(false);
   const [currentAttendees, setCurrentAttendees] = useState(attendees);
@@ -63,7 +64,9 @@ const ActivityCard = ({
       )}
       <p className={styles.activityDescription}>{description}</p>
       <div className={styles.activityFooter}>
-        <span className={styles.attendees}>{currentAttendees} Attendees</span>
+        <button className={styles.attendees} onClick={onCheckAttendees}>
+          {currentAttendees} Attendees
+        </button>
         {status === 'open' ? (
           <>
             {!isJoined ? (

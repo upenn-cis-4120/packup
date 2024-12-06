@@ -7,11 +7,13 @@ import TripInfo from '../components/TripInfo';
 import ActivityCard from '../components/ActivityOverviewCard';
 import AddActivityForm from '../components/AddActivityForm';
 import EditActivityForm from '../components/EditActivityForm';
+import AttendeesModal from '../components/AttendeesModal';
 
 const TripDetails = () => {
   const navigate = useNavigate();
   const [showForm, setShowForm] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
+  const [isAttendeesModalOpen, setIsAttendeesModalOpen] = useState(false);
   const [currentActivity, setCurrentActivity] = useState(null);
   const [activities, setActivities] = useState([
     {
@@ -20,6 +22,7 @@ const TripDetails = () => {
       date: '2024-10-10',
       capacity: '3/10',
       attendees: 3,
+      attendeelist: ['Bob', 'Charlie', 'Dave'],
       status: 'open',
       description: 'Come find Nemo!',
       location: 'Manta Point',
@@ -27,12 +30,14 @@ const TripDetails = () => {
     },
     {
       id: 2,
-      name: 'Taco Tour',
+      name: 'Street Food Tour',
       date: '2024-10-11',
       capacity: '5/5',
       attendees: 5,
+      attendeelist: ['Bob', 'Charlie', 'Dave', 'Eve', 'Frank'],
       status: 'full',
-      description: "It's Taco Time"
+      description: "Explore some local street cuisine",
+      cost: '5'
     }
   ]);
 
@@ -61,6 +66,16 @@ const TripDetails = () => {
   const closeEditForm = () => {
     setCurrentActivity(null);
     setIsEditing(false);
+  };
+
+  const openAttendeesModal = (activity) => {
+    setCurrentActivity(activity);
+    setIsAttendeesModalOpen(true);
+  };
+
+  const closeAttendeesModal = () => {
+    setCurrentActivity(null);
+    setIsAttendeesModalOpen(false);
   };
 
   const handleUpdateActivity = (updatedActivity) => {
@@ -92,6 +107,7 @@ const TripDetails = () => {
               {...activity}
               onDelete={() => handleDelete(activity.id)}
               onEdit={() => openEditForm(activity)} 
+              onCheckAttendees={() => openAttendeesModal(activity)}
             />
           ))}
         </div>
@@ -114,6 +130,12 @@ const TripDetails = () => {
             onUpdateActivity={handleUpdateActivity}
             onClose={closeEditForm}
             onDelete={() => handleDelete(currentActivity.id)}
+          />
+        )}
+        {isAttendeesModalOpen && currentActivity && (
+          <AttendeesModal
+            attendees={currentActivity.attendeelist}
+            onClose={() => closeAttendeesModal(currentActivity)}
           />
         )}
       </section>
