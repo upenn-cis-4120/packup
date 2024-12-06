@@ -16,7 +16,8 @@ const Header = () => {
         <Link to="/about" className={styles.navLink}>About</Link>
         <Link to="/" className={styles.navLink}>Trips</Link>
         <Link to="/activities" className={styles.navLink}>Activities</Link>
-        <a href="#calendar" className={styles.navLink}>Calendar</a>
+        <Link to="/calendar" className={styles.navLink}>Calendar</Link>
+        {/* <a href="#calendar" className={styles.navLink}>Calendar</a> */}
         <a href="#profile" className={styles.navLink}>Profile</a>
       </nav>
     </header>
