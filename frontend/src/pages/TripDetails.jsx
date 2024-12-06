@@ -18,8 +18,8 @@ const TripDetails = () => {
     {
       id: 1,
       name: 'Scuba Diving',
-      date: '2024-10-10',
-      capacity: '3/7',
+      date: '2024-12-10',
+      capacity: '3/10',
       attendees: 3,
       attendeelist: ['Bob', 'Charlie', 'Dave'],
       status: 'open',
@@ -30,7 +30,7 @@ const TripDetails = () => {
     {
       id: 2,
       name: 'Street Food Tour',
-      date: '2024-10-11',
+      date: '2024-12-11',
       capacity: '5/5',
       attendees: 5,
       attendeelist: ['Bob', 'Charlie', 'Dave', 'Eve', 'Frank'],
