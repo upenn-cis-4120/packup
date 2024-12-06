@@ -7,15 +7,17 @@ const TripCard = ({ title, date, image, attendees }) => {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate('/trip-details');
+    navigate('/trip-details'); 
   };
 
   return (
-    <div className={styles.tripCard}>
+    <div
+      className={styles.tripCard}
+      onClick={handleNavigate}
+      style={{ cursor: 'pointer' }}
+    >
       <div className={styles.uploadedImage}>
-        {image && (
-          <img src={image} alt="Uploaded" />
-        )}
+        {image && <img src={image} alt="Uploaded" />}
       </div>
       <div className={styles.tripHeader}>
         <div className={styles.tripTitle}>{title}</div>
@@ -25,8 +27,6 @@ const TripCard = ({ title, date, image, attendees }) => {
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/058cb9265fde56f2fc6b9e7f640464a90124d0d79568f819b2f63ecb7eee905a?placeholderIfAbsent=true&apiKey=3a931a869e0e4b4bb92008bc01989510"
           alt="Go to Trip Details"
           className={styles.calendarIcon}
-          onClick={handleNavigate}
-          style={{ cursor: 'pointer' }} 
         />
       </div>
       <footer className={styles.tripFooter}>
