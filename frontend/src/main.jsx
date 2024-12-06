@@ -5,6 +5,7 @@ import './index.css'
 import Trips from './pages/Trips.jsx'
 import Activities from './pages/Activities.jsx'
 import TripDetails from './pages/TripDetails.jsx'
+import About from './pages/About.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/" element={<Trips />} />
         <Route path="/trip-details" element={<TripDetails />} />
         <Route path="/activities" element={<Activities />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
