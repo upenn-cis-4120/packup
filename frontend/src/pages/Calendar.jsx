@@ -13,6 +13,7 @@ const Calendar = () => {
       activities: [
         { name: "Scuba Diving", date: "2024-12-10" },
         { name: "Street Food Tour", date: "2024-12-11" },
+        { name: "Beach Visit", date: "2024-12-14" },
       ],
     },
     {

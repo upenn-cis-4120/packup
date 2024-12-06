@@ -8,7 +8,7 @@ const Trips = () => {
   const [trips, setTrips] = useState([
     {
       title: 'Bali Retreat',
-      date: 'Oct 8 - 17',
+      date: 'Oct 8 - Oct 17',
       image: 'src/images/bali.jpg',
       attendees: [
         { name: 'Attendee 1', avatar: 'https://cdn.builder.io/api/v1/image/assets/TEMP/cb3180854754823f7a77ff339ba569e34a604c31c87b2445e003743bc1c2764d?placeholderIfAbsent=true&apiKey=3a931a869e0e4b4bb92008bc01989510' },
@@ -22,8 +22,8 @@ const Trips = () => {
     },
     {
       title: 'Cancun Weekend',
-      date: 'Feb 11 - 14',
-      image:'src/images/cancun.jpg',
+      date: 'Feb 11 - Feb 14',
+      image: 'src/images/cancun.jpg',
       attendees: [
         { name: 'Attendee 1', avatar: 'https://cdn.builder.io/api/v1/image/assets/TEMP/cb3180854754823f7a77ff339ba569e34a604c31c87b2445e003743bc1c2764d?placeholderIfAbsent=true&apiKey=3a931a869e0e4b4bb92008bc01989510' },
         { name: 'Attendee 2', avatar: 'https://cdn.builder.io/api/v1/image/assets/TEMP/cb3180854754823f7a77ff339ba569e34a604c31c87b2445e003743bc1c2764d?placeholderIfAbsent=true&apiKey=3a931a869e0e4b4bb92008bc01989510' },
@@ -39,6 +39,11 @@ const Trips = () => {
     },
   ]);
 
+  const formatDate = (date) => {
+    const options = { month: 'short', day: 'numeric' }; 
+    return new Intl.DateTimeFormat('en-US', options).format(new Date(date)); 
+  };
+
   const [showTripForm, setShowTripForm] = useState(false);
 
   const handleAddTrip = (newTrip) => {
@@ -46,7 +51,7 @@ const Trips = () => {
       ...prevTrips,
       {
         title: newTrip.tripName,
-        date: `${newTrip.startDate} - ${newTrip.endDate}`,
+        date: `${formatDate(newTrip.startDate)} - ${formatDate(newTrip.endDate)}`,
         attendees: [],
         image: newTrip.image,
       },
