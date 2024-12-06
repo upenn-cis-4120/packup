@@ -47,10 +47,18 @@
     background-color: rgba(176, 101, 196, 0.3);
   }
   
+  .attendees:hover {
+    background-color: rgba(176, 101, 196, 0.468);
+  }
+  
   .editButton {
-    background-color: rgba(255, 173, 105, 0.3);
+    background-color: #fafafa;
     border: none;
     cursor: pointer;
+  }
+
+  .editButton:hover {
+    color: rgb(255, 173, 105);;
   }
   
   .descriptionTitle {
@@ -66,7 +74,28 @@
     font: 400 20px 'Libre Franklin', sans-serif;
     margin-top: 39px;
     min-height: 94px;
-    padding: 35px 10px;
+    padding: 25px 25px;
+    line-height: 1.6;
+  }
+
+  .uploadedImage img {
+    border-radius: 8px;
+    max-width: 100%;
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 0;
+  }
+
+  .uploadedImage {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    max-height: 250px;
+    border-radius: 8px;
   }
   
   @media (max-width: 991px) {

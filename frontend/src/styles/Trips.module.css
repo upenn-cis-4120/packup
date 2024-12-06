@@ -59,8 +59,10 @@
 }
 
 .tripGrid {
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+  max-width: 90%;
   margin-top: 43px;
 }
 

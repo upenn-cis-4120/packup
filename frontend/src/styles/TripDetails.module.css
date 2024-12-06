@@ -18,8 +18,10 @@
 }
 
 .activitiesGrid {
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+  max-width: 90%;
   margin-top: 43px;
 }
 
@@ -55,6 +57,22 @@
   font: 400 24px 'Libre Franklin', sans-serif;
   padding: 10px;
   cursor: pointer;
+}
+
+.backButton {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px 0; 
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.backButton:hover {
+  background-color: #e0e0e0;
 }
 
 @media (max-width: 991px) {

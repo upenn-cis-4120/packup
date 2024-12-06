@@ -1,0 +1,217 @@
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(255, 173, 105, 0.3);
+    padding: 24px;
+    width: 60%;
+  }
+  
+  @media (max-width: 991px) {
+    .container {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+  
+  .formContent {
+    display: flex;
+    gap: 20px;
+  }
+  
+  @media (max-width: 991px) {
+    .formContent {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  }
+  
+  .labelColumn {
+    flex-direction: column;
+    width: 27%;
+  }
+  
+  @media (max-width: 991px) {
+    .labelColumn {
+      width: 100%;
+    }
+  }
+  
+  .formTitle {
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Libre Franklin', -apple-system, Roboto, Helvetica, sans-serif;
+    color: #303030;
+    font-weight: 400;
+  }
+  
+  .labelWrapper {
+    display: block;
+    flex-direction: column;
+    align-items: start;
+    font-size: 20px;
+    padding: 0 54px;
+  }
+  
+  .label {
+    color: #303030;
+    margin-top: 41px;
+  }
+  
+  .inputColumn {
+    display: flex;
+    flex-direction: column;
+    width: 73%;
+    padding-top: 30px;
+  }
+  
+  @media (max-width: 991px) {
+    .inputColumn {
+      width: 100%;
+    }
+  }
+  
+  .inputWrapper {
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-start;
+    gap: 23px;
+  }
+  
+  @media (max-width: 991px) {
+    .inputWrapper {
+      margin-top: 40px;
+    }
+  }
+  
+  .inputGroup {
+    align-self: end;
+    display: flex;
+    margin-top: 54px;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+    width: fit-content;
+  }
+  
+  @media (max-width: 991px) {
+    .inputGroup {
+      margin-top: 40px;
+    }
+  }
+  
+  .input {
+    border-radius: 8px;
+    background-color: #fafafa;
+    font-family: 'Libre Franklin', -apple-system, Roboto, Helvetica, sans-serif;
+    color: #303030;
+    width: 315px;
+    max-width: 100%;
+    height: 41px;
+    border: 2px solid #ffad69;
+    margin-bottom: 24px;
+  }
+  
+  @media (max-width: 991px) {
+    .input {
+      margin-left: 2px;
+    }
+  }
+  
+  .textarea {
+    border-radius: 8px;
+    background-color: #fafafa;
+    font-family: 'Libre Franklin', -apple-system, Roboto, Helvetica, sans-serif;
+    color: #303030;
+    height: 94px;
+    border: 2px solid #ffad69;
+    width: 315px;
+    max-width: 100%;
+  }
+  
+  .submitButton {
+    border-radius: 8px;
+    background-color: #ffad69;
+    box-shadow: 0 4px 4px rgba(255, 173, 105, 0.3);
+    align-self: start;
+    margin: 36px 0 0 25px;
+    padding: 20px 29px;
+    color: #fafafa;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Libre Franklin', -apple-system, Roboto, Helvetica, sans-serif;
+    border: none;
+    cursor: pointer;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #949494;
+  }
+  
+  .closeButton:hover {
+    color: #343434;
+  }
+
+  .deleteButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ff4d4f;
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .deleteButton:hover {
+    background-color: rgba(255, 77, 79, 0.1);
+  }
+  
+  .deleteButton svg {
+    fill: #ff4d4f;
+    width: 24px;
+    height: 24px;
+  }  
+
+  .imagePreview {
+    margin-top: 0px;
+  }
+  
+  .previewImage {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 991px) {
+    .submitButton {
+      margin-left: 10px;
+      padding: 15px 20px;
+    }
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }

@@ -1,77 +1,146 @@
 .activityCard {
-    background-color: #fafafa;
-    border-radius: 8px;
-    box-shadow: 0 4px 4px rgba(255, 173, 105, 0.3);
-    color: #303030;
-    font: 400 20px 'Libre Franklin', sans-serif;
-    padding: 39px 48px 23px;
-    width: 100%;
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 5px 5px rgba(255, 173, 105, 0.3);
+  color: #303030;
+  font: 400 20px 'Libre Franklin', sans-serif;
+  padding: 39px 48px 23px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.activityCard.joined {
+  box-shadow: 0 5px 5px rgba(176, 101, 196, 0.4);
+}
+
+.activityHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activityName {
+  background-color: rgba(255, 173, 105, 0.3);
+  font-size: 24px;
+  padding: 2px;
+  margin: 0;
+}
+
+.activityDate,
+.activityCapacity {
+  margin: 0;
+}
+
+.deleteButton {
+  background-color: rgba(255, 105, 105, 0.3);
+  color: #303030;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+  background-color: rgba(255, 105, 105, 0.5);
+}
+
+.activityDescription {
+  margin: 22px 0 0 0px;
+}
+
+.activityFooter {
+  display: flex;
+  gap: 20px;
+  margin-top: 17px;
+}
+
+.attendees,
+.joinButton,
+.maybeButton,
+.fullStatus,
+.waitlistButton {
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.editButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6c757d;
+  transition: color 0.2s ease-in-out;
+}
+
+.editButton:hover {
+  color: rgb(255, 173, 105);;
+}
+
+.attendees {
+  color: #303030;
+  background-color: rgba(176, 101, 196, 0.3);
+}
+
+.attendees:hover {
+  background-color: rgba(175, 101, 196, 0.468);
+}
+
+.joinButton:hover,
+.maybeButton:hover,
+.waitlistButton:hover {
+  background-color: rgba(255, 173, 105, 0.607);
+}
+
+.joinButton,
+.maybeButton,
+.waitlistButton {
+  color: #303030;
+  background-color: rgba(255, 173, 105, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.activityLocation {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #6c757d;
+  margin: 10px 0;
+  gap: 130px;
+}
+
+.locationIcon {
+  margin-right: 2px;
+  color: #ffad69;
+}
+
+.locationWrapper,
+.costWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  color: #ffad69;
+}
+
+.fullStatus {
+  background-color: #e3e1e1;
+}
+
+@media (max-width: 991px) {
+  .activityCard {
+    padding: 20px;
   }
-  
-  .activityHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .activityName {
-    background-color: rgba(255, 173, 105, 0.3);
-    font-size: 24px;
-    padding: 2px;
-    margin: 0;
-  }
-  
-  .activityDate,
-  .activityCapacity {
-    margin: 0;
-  }
-  
+
   .activityDescription {
-    margin: 22px 0 0 23px;
+    margin-left: 10px;
   }
-  
+
   .activityFooter {
-    display: flex;
-    gap: 20px;
-    margin-top: 17px;
+    flex-wrap: wrap;
   }
-  
-  .attendees,
-  .joinButton,
-  .maybeButton,
-  .fullStatus,
-  .waitlistButton {
-    border-radius: 8px;
-    padding: 10px;
-  }
-  
-  .attendees {
-    background-color: rgba(176, 101, 196, 0.3);
-  }
-  
-  .joinButton,
-  .maybeButton,
-  .waitlistButton {
-    color: #303030;
-    background-color: rgba(255, 173, 105, 0.3);
-    border: none;
-    cursor: pointer;
-  }
-  
-  .fullStatus {
-    background-color: #e3e1e1;
-  }
-  
-  @media (max-width: 991px) {
-    .activityCard {
-      padding: 20px;
-    }
-  
-    .activityDescription {
-      margin-left: 10px;
-    }
-  
-    .activityFooter {
-      flex-wrap: wrap;
-    }
-  }
+}

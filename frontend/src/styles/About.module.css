@@ -1,0 +1,40 @@
+.tripDetails {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+  }
+  
+  .content {
+    padding: 0 78px 40px;
+  }
+  
+  .sectionTitle {
+    color: #303030;
+    font: 400 24px 'Libre Franklin', sans-serif;
+    margin: 43px 0 0 16px;
+  }
+  
+  p {
+    color: #303030;
+    font: 300 18px 'Libre Franklin', sans-serif;
+    line-height: 1.6;
+    margin: 20px 16px 0;
+  }
+  
+  @media (max-width: 991px) {
+    .content {
+      padding: 0 20px 40px;
+    }
+  
+    .sectionTitle {
+      margin: 40px 0 0 10px;
+    }
+  
+    p {
+      margin: 20px 10px 0;
+    }
+  }
+  
