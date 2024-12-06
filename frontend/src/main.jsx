@@ -6,6 +6,7 @@ import Trips from './pages/Trips.jsx'
 import Activities from './pages/Activities.jsx'
 import TripDetails from './pages/TripDetails.jsx'
 import About from './pages/About.jsx'
+import Calendar from './pages/Calendar.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/trip-details" element={<TripDetails />} />
         <Route path="/activities" element={<Activities />} />
         <Route path="/about" element={<About />} />
+        <Route path="/Calendar" element={<Calendar />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

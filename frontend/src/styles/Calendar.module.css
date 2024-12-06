@@ -1,0 +1,92 @@
+.calendar {
+  background-color: #fff;
+  border-radius: 8px;
+  min-height: 100vh;
+  min-width: 100vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  padding: 100px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 500px;
+}
+
+.monthTitle {
+  font: 400 24px 'Libre Franklin', sans-serif;
+  color: #303030;
+}
+
+.navButton {
+  background-color: #ffffff00;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.navButton:hover {
+  /* background-color: #e0e0e0; */
+  color: #ff9137;
+}
+
+.daysGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  padding: 0 50px;
+}
+
+.weekday {
+  text-align: center;
+  font: 400 16px 'Libre Franklin', sans-serif;
+  color: #666;
+}
+
+.day {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 10px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dayNumber {
+  font: 600 14px 'Libre Franklin', sans-serif;
+  color: #333;
+}
+
+.tripDay {
+  background-color: rgba(255, 173, 105, 0.5);
+  color: #fff;
+}
+
+.activities {
+  margin-top: 5px;
+}
+
+.activity {
+  font: 400 14px 'Libre Franklin', sans-serif;
+  color: #fff;
+  background-color: #ff9137;
+  border-radius: 3px;
+  padding: 2px 5px;
+  margin-top: 5px;
+}
+
+.dayEmpty {
+  background-color: transparent;
+  min-height: 80px;
+}
